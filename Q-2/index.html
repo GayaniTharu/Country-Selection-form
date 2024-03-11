@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Name Display</title>
+    <style>
+        #result {
+            color: blue;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: darkgreen;">Select Your Favourite Country</h1>
+
+    <br>
+    
+    <form>
+        <label for="country">Select a Country:</label>
+        <select id="country" onchange="displayCountry()">
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="India">India</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="America">America</option>
+            <option value="UK">UK</option>
+            <option value="Africa">Africa</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+            <option value="Singapore">Singapore</option>
+        </select>
+    </form>
+    <br>
+    <br>
+
+    <h3 style="color: black;" >Your Selected Country is .....</h3>
+
+    <p id="result"> </p>
+
+    <script>
+        function displayCountry() {
+            let selectedCountry = document.getElementById("country").value;
+            let resultElement = document.getElementById("result");
+            resultElement.innerText = selectedCountry.toUpperCase();
+        }
+    </script>
+</body>
+</html>
